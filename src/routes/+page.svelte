@@ -13,8 +13,9 @@
 </script>
 
 <section>
-    <div class="s1 flex my-6 lg:my-16 justify-center items-center">
+    <div class="s1 flex my-6 lg:my-16 justify-center gap-4 items-center">
         <Logo classs="fill-primary-500 h-70"/>
+        <h1 class="text-6xl w-12 font-bold">Let Him Talk</h1>
     </div>
     <div class="mid flex items-center justify-center">
         <a href="/auth" class="btn bg-primary-500 text-3xl">Subscribe</a>
@@ -78,7 +79,7 @@
         <div class="img aspect-square bg-primary-400 h-50"></div>
     </div>
 </section>
-<section class="flex items-center justify-cente p-6">
+<section class="flex flex-col md:flex-row items-center justify-cente p-6">
     <article class="w-full md:w-1/3 mx-auto text-center flex flex-col gap-4 items-center">
         <h2 class="text-4xl">We are constantly growing</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus molestiae provident earum quo. Unde tempora adipisci nulla tempore, nisi nam aliquam necessitatibus, eveniet vel temporibus exercitationem consequatur animi possimus quisquam.</p>

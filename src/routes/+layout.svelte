@@ -20,7 +20,7 @@
 	<nav transition:fly={{x:500,duration:500}} class="sidenav absolute h-full {wWidth>1100?"w-[30vw]":"w-full"} bg-surface-50 dark:bg-surface-950 right-0 border-l-1">
 		<button onclick={()=>{sidenav=!sidenav}}><Icon icon="line-md:close" class="text-4xl text-black dark:text-white m-8" /></button>
 		<div class="links flex flex-col gap-4 items-center">
-			<button onclick={()=>{sidenav=false}}><a href="/?packages" class="btn">Packages</a></button>
+			<button onclick={()=>{sidenav=false}}><a href="/?section=packages" class="btn">Packages</a></button>
 			<a href="/changelog" class="btn">Changelog</a>
 			<a href="/about" class="btn">About</a>
 			<a href="/docs" class="btn">Docs</a>
