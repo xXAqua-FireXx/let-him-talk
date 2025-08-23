@@ -2,10 +2,11 @@
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import Icon from '@iconify/svelte'
-    import Logo from '$lib/assets/components/Logo.svelte';
+    import Logo from '$lib/assets/components/Logo3.svelte';
 	import { fly } from 'svelte/transition';
     import LightSwitch from '$lib/assets/components/LightSwitch.svelte';
-	let { children } = $props();
+    import { page } from '$app/state';
+	let { children,data } = $props();
 	let wWidth = $state()
 	let sidenav = $state(false);
 </script>
@@ -15,9 +16,9 @@
 </svelte:head>
 
 
-
+	<div class="min-h-dvh flex flex-col">
 {#if sidenav}
-	<nav transition:fly={{x:500,duration:500}} class="sidenav absolute h-full {wWidth>1100?"w-[30vw]":"w-full"} bg-surface-50 dark:bg-surface-950 right-0 border-l-1">
+	<nav transition:fly={{x:500,duration:500}} class="sidenav absolute h-full {wWidth>1100?"w-[30vw]":"w-full"} bg-surface-50 dark:bg-surface-950 right-0">
 		<button onclick={()=>{sidenav=!sidenav}}><Icon icon="line-md:close" class="text-4xl text-black dark:text-white m-8" /></button>
 		<div class="links flex flex-col gap-4 items-center">
 			<button onclick={()=>{sidenav=false}}><a href="/?section=packages" class="btn">Packages</a></button>
@@ -40,13 +41,18 @@
 		<a href="/about" class="btn">About</a>
 		<a href="/docs" class="btn">Docs</a>
 		<a href="/contact" class="btn">Contact</a>
-		<a href="/auth" class="btn bg-primary-500">Get Started</a>
+		{#if !data.user}
+			<a href="/register" class="btn bg-primary-500">Get Started</a>
+			{:else}
+			<a href="/dashboard" class="btn bg-primary-500">Dashboard</a>
+		{/if}
 	{:else}
 		<button onclick={()=>{sidenav = !sidenav}}><Icon icon="solar:hamburger-menu-broken" class="text-4xl"/></button>
 {/if}	
 	</div>
 </nav>
 {@render children?.()}
+	</div>
 <footer>
 
 </footer>

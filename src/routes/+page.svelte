@@ -1,6 +1,6 @@
 <script>
     import { afterNavigate } from "$app/navigation";
-    import Logo from '$lib/assets/components/Logo.svelte';
+    import Logo from '$lib/assets/components/Logo3.svelte';
     import Icon from '@iconify/svelte';
     import Growth from '$lib/assets/pictures/growing.svg'
     import { page } from "$app/stores";
@@ -14,11 +14,11 @@
 
 <section>
     <div class="s1 flex my-6 lg:my-16 justify-center gap-4 items-center">
-        <Logo classs="fill-primary-500 h-70"/>
-        <h1 class="text-6xl w-12 font-bold">Let Him Talk</h1>
+        <Logo classs="fill-primary-500 h-50 lg:h-70"/>
+        <h1 class="text-4xl lg:text-6xl w-12 font-bold">Let Him Talk</h1>
     </div>
     <div class="mid flex items-center justify-center">
-        <a href="/auth" class="btn bg-primary-500 text-3xl">Subscribe</a>
+        <a href="register" class="btn bg-primary-500 text-3xl">Subscribe</a>
     </div>
     <div class="ps my-6 gap-10 flex flex-col md:flex-row md:my-0 justify-between items-center px-12">
         <article class="w-full md:w-1/4">
